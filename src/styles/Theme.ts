@@ -1,0 +1,15 @@
+export const Theme = {
+  green: '#1BB76E',
+  purple: '#6333F8',
+  white: '#FFF',
+  skyblue: '#ADD8EA',
+  mainBackground: '#2D3035',
+  scrollIconBackground: '#464B57',
+  postBackground: '#474A50',
+  footerBackground: '#32353A',
+  getTheApp: '#474A50',
+  footerColor: '#A5A8AC',
+  dropdownBackground: '#53565D',
+  dropdownTitleColor: '#BABEC4',
+  dropdownItemColor: '#B4B9C2',
+};
