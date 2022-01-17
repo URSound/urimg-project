@@ -1,40 +1,12 @@
 import React, { useState, MouseEvent } from 'react';
-import styled from 'styled-components';
+import { DropdownItem, DropdownList, DropdownTitle, DropdownWrapper } from './Dropdown.styled';
+import { IDropdownProps } from './Dropdown.type';
 
-interface IDropdownProps {
-  dropdownList: Array<{ dropdownItemText: string }>;
-}
-
-const DropdownWrapper = styled.div`
-  cursor: pointer;
-  font-weight: 600;
-`;
-
-const DropdownTitle = styled.div`
-  padding: 13px 18px;
-  color: ${(props) => props.theme.dropdownTitleColor};
-  font-size: 18px;
-`;
-
-const DropdownList = styled.ul<{ isActive: boolean }>`
-  padding: 10 0px;
-  background-color: ${(props) => props.theme.dropdownBackground};
-  display: ${(props) => (props.isActive ? 'block' : 'none')};
-`;
-
-const DropdownItem = styled.li<{ isCurrent: boolean }>`
-  padding: 13px 18px;
-  color: ${(props) => (props.isCurrent ? props.theme.white : props.theme.dropdownItemColor)};
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
-const sectionDropdownList = [
-  { dropdownItemText: 'MOST VIRAL' },
-  { dropdownItemText: 'USER SUBMITTED' },
-  { dropdownItemText: 'HIGHEST SCORING' },
-];
+// const sectionDropdownList = [
+//   { dropdownItemText: 'MOST VIRAL' },
+//   { dropdownItemText: 'USER SUBMITTED' },
+//   { dropdownItemText: 'HIGHEST SCORING' },
+// ];
 
 function Dropdown({ dropdownList }: IDropdownProps) {
   const [isActive, setIsActive] = useState<boolean>(false);
